@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>움직이는 사진</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f2f4f8;
+      background-image: radial-gradient(#d9d9d9 1px, transparent 1px);
+      background-size: 20px 20px;
+      color: #002147;
+      text-align: center;
+    }
+
+    .header {
+      background-color: #002147;
+      color: white;
+      padding: 40px 0 20px 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    .sub-header {
+      font-size: 18px;
+      color: #cccccc;
+      margin-bottom: 30px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+
+    #img1 {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 15px;
+      border: 4px solid #dee3eb;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #d0d6e1;
+      margin: 40px 0;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 60px;
+      color: #888;
+      font-size: 14px;
+      padding-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">한국폴리텍대학 청주캠퍼스</div>
+  <div class="sub-header">메카트로닉스과 B반 김동현</div>
+
+  <div class="container">
+    <h2>📸 움직이는 사진</h2>
+    <hr>
+    <img id="img1" src="30.png" alt="움직이는 이미지">
+  </div>
+
+  <div class="footer">© 2025 한국폴리텍대학 청주캠퍼스</div>
+
+  <script>
+    setInterval(timer,800);
+                let step=1;
+                function timer(){
+                    switch(step){
+                        case 1:
+                                document.getElementById('img1').src='30.png';
+                                step=2;
+                        break;
+                        case 2:
+                                document.getElementById('img1').src='31.png';
+                                step=1;
+                        break;
+                    }
+                }
+  </script>
+
+</body>
+</html>

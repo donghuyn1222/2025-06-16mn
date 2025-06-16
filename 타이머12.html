@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>스톱워치</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f2f4f8;
+      background-image: radial-gradient(#d9d9d9 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .header {
+      background-color: #002147;
+      color: white;
+      text-align: center;
+      padding: 30px 0;
+      font-size: 40px;
+      font-weight: bold;
+    }
+
+    .stopwatch-container {
+      max-width: 800px;
+      margin: 50px auto;
+      background-color: white;
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .time-display input {
+      width: 100px;
+      height: 60px;
+      font-size: 36px;
+      text-align: center;
+      border: none;
+      margin: 10px;
+      background-color: #002147;
+      color: white;
+      border-radius: 10px;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons input {
+      font-size: 28px;
+      padding: 15px 40px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      font-weight: bold;
+      color: white;
+      background-color: #4682b4;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .buttons input:hover {
+      background-color: #356997;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 16px;
+      margin-top: 60px;
+      color: #666;
+    }
+  </style>
+  <script>
+    var id_interval;
+    var ms = 0, sec = 0, min = 0, hour = 0;
+
+    function start_event() {
+      clearInterval(id_interval); // 중복 실행 방지
+      id_interval = setInterval(timer, 10);
+    }
+
+    function stop_event() {
+      clearInterval(id_interval);
+    }
+
+    function timer() {
+      if (ms >= 100) { sec++; ms = 0; }
+      if (sec >= 60) { min++; sec = 0; }
+      if (min >= 60) { hour++; min = 0; }
+
+      document.getElementById('watch_hour').value = hour;
+      document.getElementById('watch_min').value = min;
+      document.getElementById('watch_sec').value = sec;
+      document.getElementById('watch_ms').value = ms;
+
+      ms++;
+    }
+  </script>
+</head>
+<body>
+
+  <div class="header">스톱워치</div>
+
+  <div class="stopwatch-container">
+    <div class="time-display">
+      <input type="text" id="watch_hour" value="0" readonly>
+      <input type="text" id="watch_min" value="0" readonly>
+      <input type="text" id="watch_sec" value="0" readonly>
+      <input type="text" id="watch_ms" value="0" readonly>
+    </div>
+
+    <div class="buttons">
+      <input type="button" value="시작" onclick="start_event()">
+      <input type="button" value="정지" onclick="stop_event()">
+    </div>
+  </div>
+
+  <div class="footer">© 2025 한국폴리텍대학 청주캠퍼스</div>
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<html>
+    <head>
+           <style>
+            body {
+                margin: 0;
+                font-family: 'Pretendard', sans-serif;
+                background-color: #f5f7fa;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .c1, .c3 {
+                width: 100%;
+                padding: 20px 0;
+                background-color: #1e2a38;
+                color: white;
+                text-align: center;
+            }
+
+            .s1 {
+                font-size: 3em;
+                color: #ffc107;
+                margin: 0;
+            }
+
+            .c2 {
+                width: 95%;
+                max-width: 900px;
+                background-color: white;
+                margin: 40px 0;
+                padding: 50px 30px;
+                border-radius: 20px;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+                text-align: center;
+            }
+
+            .s2 {
+                font-size: 2.5em;
+                margin: 0 15px;
+                color: #333;
+            }
+
+            input[type="text"] {
+                width: 200px;
+                font-size: 2em;
+                text-align: center;
+                padding: 15px;
+                margin: 15px;
+                border: 2px solid #ccc;
+                border-radius: 12px;
+                color: #d32f2f;
+                box-shadow: inset 0 2px 4px rgba(0,0,0,0.1);
+            }
+
+            #btn1 {
+                font-size: 1.8em;
+                padding: 12px 25px;
+                background-color: #007bff;
+                color: white;
+                border: none;
+                margin: 10px;
+                border-radius: 12px;
+                cursor: pointer;
+            }
+
+            #btn1:hover {
+                background-color: #0056b3;
+            }
+
+            #btn2 {
+                font-size: 2em;
+                padding: 20px 40px;
+                background-color: #28a745;
+                color: white;
+                border: none;
+                border-radius: 15px;
+                cursor: pointer;
+                margin: 30px auto;
+                width: 60%;
+                max-width: 500px;
+            }
+
+            #btn2:hover {
+                background-color: #1c7c31;
+            }
+            </style>
+
+
+            <script>
+                function add_fnc(){
+                    var a=0, b=0, c=0;
+                    var stra, strb, strc;
+                    stra= document.getElementById('txt1').value;
+                    strb= document.getElementById('txt2').value;
+
+
+                    a = parseInt(stra);
+                    b = parseInt(strb);
+
+
+                    c = a+b;
+
+
+                    strc= document.getElementById('txt3').value=c;
+                }
+                function sub_fnc(){
+                    var a=0, b=0, c=0;
+                    var stra, strb, strc;
+                    stra= document.getElementById('txt4').value;
+                    strb= document.getElementById('txt5').value;
+
+
+                    a = parseInt(stra);
+                    b = parseInt(strb);
+
+
+                    c = a-b;
+
+
+                    strc= document.getElementById('txt6').value=c;
+                }
+                function x_fnc(){
+                    var a=0, b=0, c=0;
+                    var stra, strb, strc;
+                    stra= document.getElementById('txt7').value;
+                    strb= document.getElementById('txt8').value;
+
+
+                    a = parseInt(stra);
+                    b = parseInt(strb);
+
+
+                    c = a * b;
+
+
+                    strc= document.getElementById('txt9').value=c;
+                }
+                function div_fnc(){
+                    var a=0, b=0, c=0;
+                    var stra, strb, strc;
+                    stra= document.getElementById('txt10').value;
+                    strb= document.getElementById('txt11').value;
+
+
+                    a = parseInt(stra);
+                    b = parseInt(strb);
+
+
+                    c = a / b;
+
+
+                    strc= document.getElementById('txt12').value=c;
+                }
+                    function claer_fnc(){
+                        document.getElementById('txt1').value='';
+                        document.getElementById('txt2').value='';
+                        document.getElementById('txt3').value='';
+                        document.getElementById('txt4').value='';
+                        document.getElementById('txt5').value='';
+                        document.getElementById('txt6').value='';
+                        document.getElementById('txt7').value='';
+                        document.getElementById('txt8').value='';
+                        document.getElementById('txt9').value='';
+                        document.getElementById('txt10').value='';
+                        document.getElementById('txx11').value='';
+                        document.getElementById('txt12').value='';
+                    }
+            </script>
+    </head>
+    <body>
+
+
+    </body>
+    <div class="c1"><br> <h1 class="s1">정수 계산기</h1></div>
+
+    <div class="c2">
+    <!-- ✅ CLEAR 버튼 위로 이동 -->
+    <button id="btn2" onclick="claer_fnc()">CLEAR</button>
+    <br><br>
+
+    <!-- ➕ 덧셈 -->
+    <input type="text" id="txt1">
+    <b class="s2">+</b>
+    <input type="text" id="txt2">
+    <button id="btn1" onclick="add_fnc()"> = </button>
+    <input type="text" id="txt3">
+    
+    <!-- ➖ 뺄셈 -->
+    <br><br>
+    <input type="text" id="txt4">
+    <b class="s2">-</b>
+    <input type="text" id="txt5">
+    <button id="btn1" onclick="sub_fnc()"> = </button>
+    <input type="text" id="txt6">
+    
+    <!-- ✖ 곱셈 -->
+    <br><br>
+    <input type="text" id="txt7">
+    <b class="s2">x</b>
+    <input type="text" id="txt8">
+    <button id="btn1" onclick="x_fnc()"> = </button>
+    <input type="text" id="txt9">
+    
+    <!-- ➗ 나눗셈 -->
+    <br><br>
+    <input type="text" id="txt10">
+    <b class="s2">/</b>
+    <input type="text" id="txt11">
+    <button id="btn1" onclick="div_fnc()"> = </button>
+    <input type="text" id="txt12">
+</div>
+
+</html>
+
+

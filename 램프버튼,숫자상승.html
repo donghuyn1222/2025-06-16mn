@@ -1,0 +1,117 @@
+html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      margin: 0;
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+    }
+
+    .header, .footer {
+      background-color: #1e3a8a;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .header h1, .footer h2 {
+      margin: 0;
+      font-weight: normal;
+    }
+
+    .boxes {
+      display: flex;
+      justify-content: space-around;
+      padding: 30px 0;
+      flex-wrap: wrap;
+    }
+
+    .box {
+      width: 28%;
+      height: 180px;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+      margin: 10px 0;
+    }
+
+    .controls {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 20px;
+    }
+
+    .btn {
+      font-size: 1.5em;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      cursor: pointer;
+      width: 150px; 
+      height: 60px; 
+      margin: 5px;
+      background-color: #002147;
+    }
+
+    .menu-grid a {
+      background-color: #e3eaf2;
+      color: #002147;
+      width: 90%;
+      height: 60px;
+      font-size: 2.15em;
+      font-weight: bold;
+      border-radius: 10px;
+      border-left: 6px solid #4682b4;
+    }
+
+  </style>
+  <script>
+    function red_fnc() {
+      document.getElementById('seg1').style.backgroundColor = 'red';
+    }
+    function org_fnc() {
+      document.getElementById('seg1').style.backgroundColor = 'orange';
+    }
+    function yel_fnc() {
+      document.getElementById('seg2').style.backgroundColor = 'yellow';
+    }
+    function grn_fnc() {
+      document.getElementById('seg2').style.backgroundColor = 'green';
+    }
+    function blu_fnc() {
+      document.getElementById('seg3').style.backgroundColor = 'blue';
+    }
+    function mgt_fnc() {
+      document.getElementById('seg3').style.backgroundColor = 'magenta';
+    }
+  </script>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Color Controller</h1>
+  </div>
+
+  <div class="boxes">
+    <div class="box" id="seg1"></div>
+    <div class="box" id="seg2"></div>
+    <div class="box" id="seg3"></div>
+  </div>
+
+  <div class="controls">
+    <button class="btn" onclick="red_fnc()">Red</button>
+    <button class="btn" onclick="org_fnc()">Orange</button>
+    <button class="btn" onclick="yel_fnc()">Yellow</button>
+    <button class="btn" onclick="grn_fnc()">Green</button>
+    <button class="btn" onclick="blu_fnc()">Blue</button>
+    <button class="btn" onclick="mgt_fnc()">Magenta</button>
+  </div>
+
+  <div class="footer">
+    <h2>메카트로닉스과 김동현</h2>
+  </div>
+
+</body>
+</html>

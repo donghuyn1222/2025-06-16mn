@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>덧셈기</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Pretendard', sans-serif;
+      background-color: #f0f4f8;
+      background-image: radial-gradient(#d9d9d9 1px, transparent 1px);
+      background-size: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .c1, .c3 {
+      width: 100%;
+      padding: 20px 0;
+      background-color: #002147;
+      text-align: center;
+    }
+
+    .s1 {
+      color: #ffe082;
+      font-size: 3.5em;
+      margin: 0;
+    }
+
+    .s2 {
+      color: #c3d2ff;
+      font-size: 1.5em;
+      margin: 0;
+    }
+
+    .c2 {
+      width: 90%;
+      max-width: 800px;
+      background-color: #7040ff;
+      margin: 50px auto;
+      padding: 80px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    #num1, #num2, #num3 {
+      width: 20%;
+      font-size: 2em;
+      text-align: center;
+      padding: 10px;
+      margin: 10px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    #ss1 {
+      font-size: 3em;
+      color: white;
+      vertical-align: middle;
+    }
+
+    #btn1 {
+      font-size: 2em;
+      background-color: #2e7d32;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
+
+    #btn1:hover {
+      background-color: #1b5e20;
+    }
+
+    #btn2 {
+      font-size: 2em;
+      margin-top: 30px;
+      padding: 15px 30px;
+      width: 50%;
+      background-color: #2285b3;
+      color: white;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+    }
+
+    #btn2:hover {
+      background-color: #1a6a91;
+    }
+  </style>
+
+  <script>
+    function clear_aa() {
+      document.getElementById('num1').value = "";
+      document.getElementById('num2').value = "";
+      document.getElementById('num3').value = "";
+    }
+
+    function add() {
+      var N1 = parseInt(document.getElementById('num1').value) || 0;
+      var N2 = parseInt(document.getElementById('num2').value) || 0;
+      document.getElementById('num3').value = N1 + N2;
+    }
+  </script>
+</head>
+
+<body>
+  <div class="c1">
+    <h1 class="s1">➕ 덧셈기</h1>
+  </div>
+
+  <div class="c2">
+    <input type="text" id="num1">
+    <span id="ss1">+</span>
+    <input type="text" id="num2">
+    <button id="btn1" onclick="add()">=</button>
+    <input type="text" id="num3" readonly><br>
+    <button id="btn2" onclick="clear_aa();">🧹 CLEAR</button>
+  </div>
+
+  <div class="c3">
+    <h1 class="s2">한국폴리텍대학 청주캠퍼스 메카트로닉스과 김동현</h1>
+  </div>
+</body>
+</html>

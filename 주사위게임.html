@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <title>주사위 게임</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+  }
+
+  body {
+    background-color: #f5f7fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+  }
+
+  .c1 {
+    width: 90%;
+    max-width: 800px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    border: 4px solid #003366;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .c2 {
+    width: 90%;
+    max-width: 800px;
+    background-color: #e6f0ff;
+    border-radius: 20px;
+    border: 4px solid #0059b3;
+    padding: 50px 20px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .c3 {
+    width: 90%;
+    max-width: 800px;
+    background-color: #fffde7;
+    border-radius: 20px;
+    border: 4px solid #f9a825;
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: 30px;
+  }
+
+  .s1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    color: #212121;
+    margin-bottom: 10px;
+  }
+
+  .s2 {
+    font-size: 1.2em;
+    color: #444;
+  }
+
+  #txt1 {
+    width: 200px;
+    height: 140px;
+    font-size: 5em;
+    text-align: center;
+    color: #d81b60;
+    border: 2px solid #cccccc;
+    border-radius: 15px;
+    background-color: #fff;
+    margin-bottom: 40px;
+  }
+
+  #btn1 {
+    width: 60%;
+    max-width: 300px;
+    height: 70px;
+    font-size: 1.8em;
+    font-weight: bold;
+    background-color: #1565c0;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  #btn1:hover {
+    background-color: #0d47a1;
+  }
+</style>
+
+  <script>
+    function game_strt() {
+            document.getElementById('txt1').value = Math.floor(Math.random() * 6) + 1;
+        }
+  </script>
+</head>
+<body>
+  <div class="c1">
+    <h1 class="s1">🎲 주사위 게임</h1>
+  </div>
+
+  <div class="c2">
+    <input type="text" id="txt1" value="1" readonly><br>
+    <button id="btn1" onclick="game_strt();">START</button>
+  </div>
+
+  <div class="c3">
+    <p class="s2">메카트로닉스과 김동현</p>
+  </div>
+</body>
+</html>
